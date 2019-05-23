@@ -10,14 +10,20 @@
       <li> consectetuer adipiscing elit.</li>
     </ol>
     <script>
+      //1. Crear el elementos
       var elemento = document.createElement("li"),
-          contenido = document.createTextNode("Nuevo texto");
+      //2. Crear un nodo de texto
+      contenido = document.createTextNode("Nuevo texto");
 
+      //3. Añadir el nodo de texto al elemento
       elemento.appendChild(contenido);
 
-      var padre = document.getElementsByTagName("li")[0].parentNode,
-          primerElemento= document.getElementsByTagName("li")[1];
-      padre.insertBefore(elemento,primerElemento);
+      //4. Agregar atributos al elementos
+      //1.Atributo padre = li
+      var padre = document.getElementsByTagName("li")[0].parentNode,//trae todos los elementos li
+          primerElemento= document.getElementsByTagName("li")[2];
+      //5. Agregar el elemento al documento
+      padre.insertBefore(elemento,primerElemento);//sirve para indicar un lugar antes de primerElemento
 
     </script>
 
