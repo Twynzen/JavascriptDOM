@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <ol id="lista">
+      <li> Lorem ipsum dolor sit amet, </li>
+      <li> consectetuer adipiscing elit.</li>
+        <li> consectedsadstuer adipiscdddng elitpopo.</li>
+    </ol>
+    <script>
+      //1. Crear el elementos
+      var elemento = document.createElement("li"),
+      //2. Crear un nodo de texto
+      contenido = document.createTextNode("Nuevo texto");
+
+      //3. Añadir el nodo de texto al elemento
+      elemento.appendChild(contenido);
+
+      //4. Agregar atributos al elementos
+      //4a.creamos Atributo padre y sus hijos de li
+      var padre = document.getElementsByTagName("li")[0].parentNode; //se cuentan todos los li
+      referencia1 = document.getElementsByTagName("li")[0];
+      referencia2 = document.getElementsByTagName("li")[2];
+
+
+        //5. Agregar el elemento al documento
+
+      padre.replaceChild(elemento, referencia1); //se aplica el elemento nuevo y luego el que se quiere eliminar
+
+
+      //5a. Eliminar elementos
+      padre.removeChild(referencia2);
+
+
+    </script>
+
+  </body>
+</html>
